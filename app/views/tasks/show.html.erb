@@ -1,10 +1,19 @@
 <div class='container'>
 
   <div class='mb-5'>
-    <h2 class='mb-5'><%= @task.title %></h2>
+    <div class='task-title'>
+      <h2 class='mb-5 p-4'><%= @task.title %></h2>
+
+      <%= link_to task_edit_path, class:'teste' do %>
+        <div class='btn btn-secondary btn-lg'>
+          <i class="fa-solid fa-pen-to-square"></i>
+          <%=  "Edit Task" %>
+        </div>
+      <% end %>
+    </div>
 
     <p id='details-card' class='p-4'><%= @task.details %></p>
-
+    <br>
     <% if @task.completed %>
 
       <i class="fa-regular fa-square-check"></i> <span>This task is completed</span>
@@ -13,13 +22,10 @@
     <% end %>
   </div>
 
-  <%= link_to 'Edit Task', task_edit_path %>
-
-  <%= link_to "Delete",
-    task_path(@task),
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-  %>
-
+  <%= link_to task_path(@task), class:'me-3', data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+    <i class="fa-solid fa-trash-can"></i>
+    <%= " Delete"%>
+  <% end %>
 
 
   <%= link_to tasks_path, class:'teste' do %>

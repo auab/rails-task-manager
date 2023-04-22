@@ -11,9 +11,10 @@
         <% end %>
         <%= link_to task.title, task_path(task) %>
         -
-        <a data-turbo-method="delete" data-turbo-confirm="Are you sure?" href="/tasks/1"><i class="fa-solid fa-trash-can"></i></a>
-
-
+        <%= link_to task_path(task), class:'teste', data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+          <i class="fa-solid fa-trash-can"></i>
+          <%= ""%>
+        <% end %>
       </li>
     <% end %>
   </ul>

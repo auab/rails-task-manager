@@ -33,3 +33,9 @@
   border-radius: 5px;
   border:  solid #4a4a4c ;
  }
+
+ .task-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
