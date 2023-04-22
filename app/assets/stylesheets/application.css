@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
+ #index_ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+ }
+
+ a {
+  color: #5166c5
+ }
+
+ .index-title{
+  background-color: rgb(218, 214, 214);
+ }
+
+ #details-card{
+  background-color: rgb(218, 214, 214);
+  border-radius: 5px;
+  border:  solid #4a4a4c ;
+ }
